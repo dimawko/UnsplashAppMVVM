@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		C21F9275282E807700A84228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F9274282E807700A84228 /* AppDelegate.swift */; };
 		C21F9277282E807700A84228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F9276282E807700A84228 /* SceneDelegate.swift */; };
-		C21F9279282E807700A84228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F9278282E807700A84228 /* ViewController.swift */; };
-		C21F927C282E807700A84228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C21F927A282E807700A84228 /* Main.storyboard */; };
+		C21F9279282E807700A84228 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F9278282E807700A84228 /* TabBarViewController.swift */; };
 		C21F927E282E807800A84228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C21F927D282E807800A84228 /* Assets.xcassets */; };
-		C21F9281282E807800A84228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C21F927F282E807800A84228 /* LaunchScreen.storyboard */; };
+		C21F9290282E823800A84228 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F928F282E823800A84228 /* ImagesCollectionViewController.swift */; };
+		C21F9292282E835800A84228 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F9291282E835800A84228 /* NetworkManager.swift */; };
+		C21F9294282E838B00A84228 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F9293282E838B00A84228 /* Image.swift */; };
+		C21F9297282E840A00A84228 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C21F9296282E840A00A84228 /* Realm */; };
+		C21F9299282E840A00A84228 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C21F9298282E840A00A84228 /* RealmSwift */; };
+		C21F929C282E878B00A84228 /* imagesCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F929B282E878A00A84228 /* imagesCollectionViewModel.swift */; };
+		C21F929E282E89F400A84228 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F929D282E89F400A84228 /* ImageCollectionViewCell.swift */; };
+		C21F92A0282E8A6900A84228 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F929F282E8A6900A84228 /* PhotoView.swift */; };
+		C21F92A2282E8B0F00A84228 /* ImageCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F92A1282E8B0F00A84228 /* ImageCollectionCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C21F9271282E807700A84228 /* UnsplashAppMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashAppMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21F9274282E807700A84228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C21F9276282E807700A84228 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C21F9278282E807700A84228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C21F927B282E807700A84228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C21F9278282E807700A84228 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C21F927D282E807800A84228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C21F9280282E807800A84228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C21F9282282E807800A84228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C21F928F282E823800A84228 /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewController.swift; sourceTree = "<group>"; };
+		C21F9291282E835800A84228 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C21F9293282E838B00A84228 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		C21F929B282E878A00A84228 /* imagesCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagesCollectionViewModel.swift; sourceTree = "<group>"; };
+		C21F929D282E89F400A84228 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		C21F929F282E8A6900A84228 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		C21F92A1282E8B0F00A84228 /* ImageCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C21F9299282E840A00A84228 /* RealmSwift in Frameworks */,
+				C21F9297282E840A00A84228 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +70,84 @@
 		C21F9273282E807700A84228 /* UnsplashAppMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				C21F9274282E807700A84228 /* AppDelegate.swift */,
-				C21F9276282E807700A84228 /* SceneDelegate.swift */,
-				C21F9278282E807700A84228 /* ViewController.swift */,
-				C21F927A282E807700A84228 /* Main.storyboard */,
-				C21F927D282E807800A84228 /* Assets.xcassets */,
-				C21F927F282E807800A84228 /* LaunchScreen.storyboard */,
-				C21F9282282E807800A84228 /* Info.plist */,
+				C21F928C282E811200A84228 /* View */,
+				C21F928B282E810500A84228 /* Models */,
+				C21F928A282E80A900A84228 /* Services */,
+				C21F9289282E809B00A84228 /* Resources */,
+				C21F9288282E808D00A84228 /* App */,
 			);
 			path = UnsplashAppMVVM;
+			sourceTree = "<group>";
+		};
+		C21F9288282E808D00A84228 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C21F9274282E807700A84228 /* AppDelegate.swift */,
+				C21F9276282E807700A84228 /* SceneDelegate.swift */,
+				C21F9282282E807800A84228 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C21F9289282E809B00A84228 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C21F927D282E807800A84228 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C21F928A282E80A900A84228 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C21F9291282E835800A84228 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C21F928B282E810500A84228 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C21F9293282E838B00A84228 /* Image.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C21F928C282E811200A84228 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C21F928E282E81CF00A84228 /* ImagesCollection */,
+				C21F928D282E81C600A84228 /* TabBar */,
+				C21F929F282E8A6900A84228 /* PhotoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C21F928D282E81C600A84228 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C21F9278282E807700A84228 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		C21F928E282E81CF00A84228 /* ImagesCollection */ = {
+			isa = PBXGroup;
+			children = (
+				C21F929A282E870F00A84228 /* ImagesCollectionCell */,
+				C21F929B282E878A00A84228 /* imagesCollectionViewModel.swift */,
+				C21F928F282E823800A84228 /* ImagesCollectionViewController.swift */,
+			);
+			path = ImagesCollection;
+			sourceTree = "<group>";
+		};
+		C21F929A282E870F00A84228 /* ImagesCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				C21F929D282E89F400A84228 /* ImageCollectionViewCell.swift */,
+				C21F92A1282E8B0F00A84228 /* ImageCollectionCellViewModel.swift */,
+			);
+			path = ImagesCollectionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +166,10 @@
 			dependencies = (
 			);
 			name = UnsplashAppMVVM;
+			packageProductDependencies = (
+				C21F9296282E840A00A84228 /* Realm */,
+				C21F9298282E840A00A84228 /* RealmSwift */,
+			);
 			productName = UnsplashAppMVVM;
 			productReference = C21F9271282E807700A84228 /* UnsplashAppMVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +198,9 @@
 				Base,
 			);
 			mainGroup = C21F9268282E807700A84228;
+			packageReferences = (
+				C21F9295282E840A00A84228 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = C21F9272282E807700A84228 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C21F9281282E807800A84228 /* LaunchScreen.storyboard in Resources */,
 				C21F927E282E807800A84228 /* Assets.xcassets in Resources */,
-				C21F927C282E807700A84228 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +226,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C21F9279282E807700A84228 /* ViewController.swift in Sources */,
+				C21F9290282E823800A84228 /* ImagesCollectionViewController.swift in Sources */,
+				C21F9294282E838B00A84228 /* Image.swift in Sources */,
+				C21F92A2282E8B0F00A84228 /* ImageCollectionCellViewModel.swift in Sources */,
+				C21F929E282E89F400A84228 /* ImageCollectionViewCell.swift in Sources */,
+				C21F92A0282E8A6900A84228 /* PhotoView.swift in Sources */,
+				C21F929C282E878B00A84228 /* imagesCollectionViewModel.swift in Sources */,
+				C21F9279282E807700A84228 /* TabBarViewController.swift in Sources */,
+				C21F9292282E835800A84228 /* NetworkManager.swift in Sources */,
 				C21F9275282E807700A84228 /* AppDelegate.swift in Sources */,
 				C21F9277282E807700A84228 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C21F927A282E807700A84228 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C21F927B282E807700A84228 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C21F927F282E807800A84228 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C21F9280282E807800A84228 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C21F9283282E807800A84228 /* Debug */ = {
@@ -289,10 +365,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25CKWY7LZ9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UnsplashAppMVVM/Info.plist;
+				INFOPLIST_FILE = UnsplashAppMVVM/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +392,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25CKWY7LZ9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UnsplashAppMVVM/Info.plist;
+				INFOPLIST_FILE = UnsplashAppMVVM/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +432,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C21F9295282E840A00A84228 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C21F9296282E840A00A84228 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C21F9295282E840A00A84228 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		C21F9298282E840A00A84228 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C21F9295282E840A00A84228 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C21F9269282E807700A84228 /* Project object */;
 }
