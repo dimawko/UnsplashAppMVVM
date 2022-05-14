@@ -13,7 +13,7 @@ enum LinkString {
     static let apiKey = "&client_id=jl7DJcBPGRgow1g6KiOaUQWU5ZRStIDPqXu5ZSJaJAM"
 }
 
-enum ImageSize {
+enum ImageResolution {
     case small
     case regular
 }
@@ -26,14 +26,14 @@ final class NetworkManager {
     private init() {}
 
     func fetchImage(
-        imageType: ImageSize,
+        imageResolution: ImageResolution,
         imageData: Image,
         completion: @escaping(Result<Data, Error>) -> Void
     ) {
         var imageUrl = ""
         guard let imageDataUrls = imageData.urls else { return }
 
-        switch imageType {
+        switch imageResolution {
         case .small:
             imageUrl = imageDataUrls.small
         case .regular:
@@ -41,10 +41,10 @@ final class NetworkManager {
         }
 
         // MARK: - Checking if the image is already in a cache
-//        if let imageData = cachedImages.object(forKey: imageUrl as NSString) {
-//            completion(.success(imageData as Data))
-//            return
-//        }
+        if let imageData = cachedImages.object(forKey: imageUrl as NSString) {
+            completion(.success(imageData as Data))
+            return
+        }
 
         // MARK: - Download image, if its not in the cache
         guard let url = URL(string: imageUrl) else { return }
@@ -56,7 +56,9 @@ final class NetworkManager {
             do {
                 let data = try Data(contentsOf: localUrl)
                 self.cachedImages.setObject(data as NSData, forKey: imageUrl as NSString)
-                completion(.success(data))
+                DispatchQueue.main.async {
+                    completion(.success(data))
+                }
             } catch let error {
                 completion(.failure(error))
             }
@@ -77,7 +79,9 @@ final class NetworkManager {
             }
             do {
                 let imageData = try JSONDecoder().decode(T.self, from: data)
-                completion(.success(imageData))
+                DispatchQueue.main.async {
+                    completion(.success(imageData))
+                }
             } catch let error {
                 completion(.failure(error))
             }

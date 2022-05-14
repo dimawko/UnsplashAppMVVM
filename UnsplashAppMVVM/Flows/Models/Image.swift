@@ -20,7 +20,7 @@ class Image: Object, Codable {
     @Persisted var likes = 0
     @Persisted var user: User? = nil
     @Persisted var location: Location? = nil
-    @Persisted var downloads: Int? = 0
+    @Persisted var downloads = 0
 
     enum CodingKeys: String, CodingKey {
         case createdAt = "created_at"

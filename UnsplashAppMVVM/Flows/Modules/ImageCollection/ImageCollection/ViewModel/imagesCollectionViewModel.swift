@@ -11,7 +11,8 @@ protocol ImageCollectionViewModelProtocol {
     var images: [Image] { get }
     func fetchImages(completion: @escaping() -> Void)
     func numberOfItems() -> Int
-    func getCellViewModel(at indexPath: IndexPath) -> ImageCollectionCellViewModelProtocol
+    func getCellViewModel(for indexPath: IndexPath) -> ImageCollectionCellViewModelProtocol
+    func viewModelForSelectedItem(at indexPath: IndexPath) -> ImageDetailsViewModelProtocol
 }
 
 class ImageCollectionViewModel: ImageCollectionViewModelProtocol {
@@ -39,8 +40,13 @@ class ImageCollectionViewModel: ImageCollectionViewModelProtocol {
         images.count
     }
 
-    func getCellViewModel(at indexPath: IndexPath) -> ImageCollectionCellViewModelProtocol {
+    func getCellViewModel(for indexPath: IndexPath) -> ImageCollectionCellViewModelProtocol {
         let image = images[indexPath.row]
         return ImageCollectionCellViewModel(image: image)
+    }
+
+    func viewModelForSelectedItem(at indexPath: IndexPath) -> ImageDetailsViewModelProtocol {
+        let image = images[indexPath.row]
+        return ImageDetailsViewModel(image: image)
     }
 }

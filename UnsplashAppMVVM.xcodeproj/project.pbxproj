@@ -20,6 +20,8 @@
 		C21F929E282E89F400A84228 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F929D282E89F400A84228 /* ImageCollectionViewCell.swift */; };
 		C21F92A0282E8A6900A84228 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F929F282E8A6900A84228 /* PhotoView.swift */; };
 		C21F92A2282E8B0F00A84228 /* ImageCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F92A1282E8B0F00A84228 /* ImageCollectionCellViewModel.swift */; };
+		C2D0928A282F9F8A006B3763 /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D09289282F9F8A006B3763 /* ImageDetailsViewController.swift */; };
+		C2D0928C282F9F98006B3763 /* ImageDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D0928B282F9F98006B3763 /* ImageDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		C21F929D282E89F400A84228 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		C21F929F282E8A6900A84228 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		C21F92A1282E8B0F00A84228 /* ImageCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCellViewModel.swift; sourceTree = "<group>"; };
+		C2D09289282F9F8A006B3763 /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
+		C2D0928B282F9F98006B3763 /* ImageDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +74,9 @@
 		C21F9273282E807700A84228 /* UnsplashAppMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				C2D09287282F9E1A006B3763 /* Core UI */,
-				C21F928C282E811200A84228 /* View */,
-				C21F928B282E810500A84228 /* Models */,
-				C21F928A282E80A900A84228 /* Services */,
+				C2D09287282F9E1A006B3763 /* Core */,
+				C2D09296282FC479006B3763 /* Flows */,
 				C21F9289282E809B00A84228 /* Resources */,
-				C21F9288282E808D00A84228 /* App */,
 			);
 			path = UnsplashAppMVVM;
 			sourceTree = "<group>";
@@ -114,64 +115,141 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C21F928C282E811200A84228 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C21F928E282E81CF00A84228 /* ImagesCollection */,
-				C2D09288282F9EB8006B3763 /* ImageDetails */,
-				C21F928D282E81C600A84228 /* TabBar */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		C21F928D282E81C600A84228 /* TabBar */ = {
+		C21F928D282E81C600A84228 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				C21F9278282E807700A84228 /* TabBarViewController.swift */,
 			);
-			path = TabBar;
+			path = View;
 			sourceTree = "<group>";
 		};
-		C21F928E282E81CF00A84228 /* ImagesCollection */ = {
+		C21F928E282E81CF00A84228 /* ImageCollection */ = {
 			isa = PBXGroup;
 			children = (
-				C21F929A282E870F00A84228 /* ImageCollectionCell */,
+				C2D09290282FC380006B3763 /* ImageCollectionCell */,
 				C2D09286282F9DF6006B3763 /* ImageCollection */,
 			);
-			path = ImagesCollection;
+			path = ImageCollection;
 			sourceTree = "<group>";
 		};
-		C21F929A282E870F00A84228 /* ImageCollectionCell */ = {
+		C21F929A282E870F00A84228 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				C21F929D282E89F400A84228 /* ImageCollectionViewCell.swift */,
-				C21F92A1282E8B0F00A84228 /* ImageCollectionCellViewModel.swift */,
 			);
-			path = ImageCollectionCell;
+			path = View;
 			sourceTree = "<group>";
 		};
 		C2D09286282F9DF6006B3763 /* ImageCollection */ = {
 			isa = PBXGroup;
 			children = (
-				C21F929B282E878A00A84228 /* imagesCollectionViewModel.swift */,
-				C21F928F282E823800A84228 /* ImagesCollectionViewController.swift */,
+				C2D09291282FC391006B3763 /* ViewModel */,
+				C2D09292282FC3A0006B3763 /* View */,
 			);
 			path = ImageCollection;
 			sourceTree = "<group>";
 		};
-		C2D09287282F9E1A006B3763 /* Core UI */ = {
+		C2D09287282F9E1A006B3763 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				C21F929F282E8A6900A84228 /* PhotoView.swift */,
+				C21F928A282E80A900A84228 /* Services */,
+				C21F9288282E808D00A84228 /* App */,
+				C2D09295282FC44C006B3763 /* UI */,
 			);
-			path = "Core UI";
+			path = Core;
 			sourceTree = "<group>";
 		};
 		C2D09288282F9EB8006B3763 /* ImageDetails */ = {
 			isa = PBXGroup;
 			children = (
+				C2D09294282FC3DE006B3763 /* ViewModel */,
+				C2D09293282FC3D9006B3763 /* View */,
 			);
 			path = ImageDetails;
+			sourceTree = "<group>";
+		};
+		C2D0928D282FC2FA006B3763 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C2D0928E282FC30E006B3763 /* TabBar */,
+				C21F928E282E81CF00A84228 /* ImageCollection */,
+				C2D09288282F9EB8006B3763 /* ImageDetails */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C2D0928E282FC30E006B3763 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C21F928D282E81C600A84228 /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		C2D0928F282FC368006B3763 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C21F92A1282E8B0F00A84228 /* ImageCollectionCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C2D09290282FC380006B3763 /* ImageCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				C2D0928F282FC368006B3763 /* ViewModel */,
+				C21F929A282E870F00A84228 /* View */,
+			);
+			path = ImageCollectionCell;
+			sourceTree = "<group>";
+		};
+		C2D09291282FC391006B3763 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C21F929B282E878A00A84228 /* imagesCollectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C2D09292282FC3A0006B3763 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C21F928F282E823800A84228 /* ImagesCollectionViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2D09293282FC3D9006B3763 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2D09289282F9F8A006B3763 /* ImageDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2D09294282FC3DE006B3763 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C2D0928B282F9F98006B3763 /* ImageDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C2D09295282FC44C006B3763 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C21F929F282E8A6900A84228 /* PhotoView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C2D09296282FC479006B3763 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				C21F928B282E810500A84228 /* Models */,
+				C2D0928D282FC2FA006B3763 /* Modules */,
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +335,10 @@
 				C21F92A0282E8A6900A84228 /* PhotoView.swift in Sources */,
 				C21F929C282E878B00A84228 /* imagesCollectionViewModel.swift in Sources */,
 				C21F9279282E807700A84228 /* TabBarViewController.swift in Sources */,
+				C2D0928C282F9F98006B3763 /* ImageDetailsViewModel.swift in Sources */,
 				C21F9292282E835800A84228 /* NetworkManager.swift in Sources */,
 				C21F9275282E807700A84228 /* AppDelegate.swift in Sources */,
+				C2D0928A282F9F8A006B3763 /* ImageDetailsViewController.swift in Sources */,
 				C21F9277282E807700A84228 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

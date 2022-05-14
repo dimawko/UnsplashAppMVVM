@@ -45,8 +45,17 @@ class ImageCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell else { return UICollectionViewCell() }
-        cell.viewModel = viewModel.getCellViewModel(at: indexPath)
+        cell.viewModel = viewModel.getCellViewModel(for: indexPath)
         return cell
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let imageDetailsVC = ImageDetailsViewController()
+        let ImageDetailsViewModel = viewModel.viewModelForSelectedItem(at: indexPath)
+        imageDetailsVC.modalPresentationStyle = .currentContext
+        imageDetailsVC.viewModel = ImageDetailsViewModel
+
+        self.navigationController?.pushViewController(imageDetailsVC, animated: true)
     }
 }
 
