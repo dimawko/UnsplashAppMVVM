@@ -37,8 +37,8 @@ class PhotoView: UIView {
     }
 
     private func setupView() {
-        addSubview(imageView)
         addSubview(spinner)
+        addSubview(imageView)
 
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),

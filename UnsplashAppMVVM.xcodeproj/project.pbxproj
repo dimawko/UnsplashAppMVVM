@@ -70,6 +70,7 @@
 		C21F9273282E807700A84228 /* UnsplashAppMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C2D09287282F9E1A006B3763 /* Core UI */,
 				C21F928C282E811200A84228 /* View */,
 				C21F928B282E810500A84228 /* Models */,
 				C21F928A282E80A900A84228 /* Services */,
@@ -117,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				C21F928E282E81CF00A84228 /* ImagesCollection */,
+				C2D09288282F9EB8006B3763 /* ImageDetails */,
 				C21F928D282E81C600A84228 /* TabBar */,
-				C21F929F282E8A6900A84228 /* PhotoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,20 +135,43 @@
 		C21F928E282E81CF00A84228 /* ImagesCollection */ = {
 			isa = PBXGroup;
 			children = (
-				C21F929A282E870F00A84228 /* ImagesCollectionCell */,
-				C21F929B282E878A00A84228 /* imagesCollectionViewModel.swift */,
-				C21F928F282E823800A84228 /* ImagesCollectionViewController.swift */,
+				C21F929A282E870F00A84228 /* ImageCollectionCell */,
+				C2D09286282F9DF6006B3763 /* ImageCollection */,
 			);
 			path = ImagesCollection;
 			sourceTree = "<group>";
 		};
-		C21F929A282E870F00A84228 /* ImagesCollectionCell */ = {
+		C21F929A282E870F00A84228 /* ImageCollectionCell */ = {
 			isa = PBXGroup;
 			children = (
 				C21F929D282E89F400A84228 /* ImageCollectionViewCell.swift */,
 				C21F92A1282E8B0F00A84228 /* ImageCollectionCellViewModel.swift */,
 			);
-			path = ImagesCollectionCell;
+			path = ImageCollectionCell;
+			sourceTree = "<group>";
+		};
+		C2D09286282F9DF6006B3763 /* ImageCollection */ = {
+			isa = PBXGroup;
+			children = (
+				C21F929B282E878A00A84228 /* imagesCollectionViewModel.swift */,
+				C21F928F282E823800A84228 /* ImagesCollectionViewController.swift */,
+			);
+			path = ImageCollection;
+			sourceTree = "<group>";
+		};
+		C2D09287282F9E1A006B3763 /* Core UI */ = {
+			isa = PBXGroup;
+			children = (
+				C21F929F282E8A6900A84228 /* PhotoView.swift */,
+			);
+			path = "Core UI";
+			sourceTree = "<group>";
+		};
+		C2D09288282F9EB8006B3763 /* ImageDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImageDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

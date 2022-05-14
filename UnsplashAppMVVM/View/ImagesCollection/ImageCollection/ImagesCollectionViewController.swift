@@ -15,7 +15,6 @@ class ImageCollectionViewController: UICollectionViewController {
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
-
             }
         }
     }

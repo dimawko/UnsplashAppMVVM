@@ -9,7 +9,7 @@ import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
 
-    static let identifier = "PhotoCollectionViewCell"
+    static let identifier = "ImageCollectionViewCell"
 
     var photoView: PhotoView = {
         let view = PhotoView()
@@ -19,7 +19,12 @@ class ImageCollectionViewCell: UICollectionViewCell {
 
     var viewModel: ImageCollectionCellViewModelProtocol! {
         didSet {
-            photoView.imageView.image = UIImage(data: viewModel.imageData)
+            photoView.spinner.startAnimating()
+            viewModel.getImageData {
+                guard let imageData = self.viewModel.imageData else { return }
+                self.photoView.imageView.image = UIImage(data: imageData)
+                self.photoView.spinner.stopAnimating()
+            }
         }
     }
 
