@@ -1,5 +1,5 @@
 # UnsplashAppMVVM
-# Project is unfinished! Project in progress...
+# Project is unfinished! I'm working on it ;)
 ## Features
 - Getting random images collection from Unsplash.com by scrolling down
 - Searching images by query text from Unsplash.com
