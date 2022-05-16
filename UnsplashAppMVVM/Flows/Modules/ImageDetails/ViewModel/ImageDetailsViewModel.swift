@@ -34,15 +34,19 @@
 //}
 
 import Foundation
+import RealmSwift
 
 protocol ImageDetailsViewModelProtocol {
     var userName: String { get }
+    var creationDate: String { get }
     var location: String { get }
     var downloads: Int { get }
     var imageData: Data? { get }
     var viewModelDidChange: ((ImageDetailsViewModelProtocol) -> Void)? { get set }
+    var isFavorite: Bool { get }
     init(image: Image)
     func getImageDataWithHighRes(completion: @escaping() -> Void)
+    func favoriteButtonPressed()
 }
 
 class ImageDetailsViewModel: ImageDetailsViewModelProtocol {
@@ -50,6 +54,11 @@ class ImageDetailsViewModel: ImageDetailsViewModelProtocol {
     var userName: String {
         guard let userName = image.user?.name else { return "Unknown" }
         return userName
+    }
+
+    var creationDate: String {
+        guard let creationDate = image.createdAt else { return "Unknown" }
+        return creationDate
     }
 
     var location: String {
@@ -63,6 +72,15 @@ class ImageDetailsViewModel: ImageDetailsViewModelProtocol {
 
     var imageData: Data?
 
+    var isFavorite: Bool {
+        get {
+            StorageManager.shared.save(image)
+        } set {
+            StorageManager.shared.delete(image)
+            viewModelDidChange?(self)
+        }
+    }
+
     var viewModelDidChange: ((ImageDetailsViewModelProtocol) -> Void)?
 
     private let image: Image
@@ -72,7 +90,7 @@ class ImageDetailsViewModel: ImageDetailsViewModelProtocol {
     }
 
     func getImageDataWithHighRes(completion: @escaping() -> Void) {
-        NetworkManager.shared.fetchImage(imageType: .regular, imageData: image) { result in
+        NetworkManager.shared.fetchImage(imageResolution: .regular, imageData: image) { result in
             switch result {
             case .success(let imageData):
                 self.imageData = imageData
@@ -81,5 +99,18 @@ class ImageDetailsViewModel: ImageDetailsViewModelProtocol {
                 print(error)
             }
         }
+    }
+
+    func favoriteButtonPressed() {
+        isFavorite.toggle()
+    }
+
+    private func isImageFavorite() -> Bool {
+        var isFavorite = false
+        let realmImage = StorageManager.shared.realm?.object(ofType: Image.self, forPrimaryKey: image.id)
+        if realmImage != nil {
+            isFavorite = true
+        }
+        return isFavorite
     }
 }

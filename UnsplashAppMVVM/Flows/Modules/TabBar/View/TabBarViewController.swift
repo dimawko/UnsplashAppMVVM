@@ -16,8 +16,9 @@ class TabBarViewController: UITabBarController {
     }
 
     private func setupTabBar() {
-        let photosVC = UINavigationController(rootViewController: ImageCollectionViewController())
-        self.setViewControllers([photosVC], animated: true)
+        let imageCollectionVC = UINavigationController(rootViewController: ImageCollectionViewController())
+        let favoriteImagesVC = UINavigationController(rootViewController: FavoriteImagesTableViewController())
+        self.setViewControllers([imageCollectionVC, favoriteImagesVC], animated: true)
 
         let images = ["house.fill", "heart.fill"]
         let configuration = UIImage.SymbolConfiguration(scale: .medium)

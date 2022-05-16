@@ -18,7 +18,7 @@ class ImageCollectionCellViewModel: ImageCollectionCellViewModelProtocol {
     var imageData: Data?
 
     func getImageData(completion: @escaping() -> Void) {
-        NetworkManager.shared.fetchImage(imageType: .small, imageData: image) { [weak self] result in
+        NetworkManager.shared.fetchImage(imageResolution: .small, imageData: image) { [weak self] result in
             switch result {
             case .success(let imageData):
                 DispatchQueue.main.async {
